@@ -1,0 +1,7 @@
+<app-sidebar [width]="sidebar"></app-sidebar>
+
+<div id="main" [ngStyle]="{'margin-left.px': sidebar}" style="padding: 0px 16px 16px 16px; transition: margin-left 0.5s; min-height: 100vh;background-color: #efefef;">
+    <app-navbar (widthSidebar)="sidebar = $event"></app-navbar>
+    <router-outlet></router-outlet>
+    <app-footer alineacion="right"></app-footer>
+</div>

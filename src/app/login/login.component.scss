@@ -1,0 +1,110 @@
+@import './../shared/scss/loading.scss';
+.banner{
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  
+  .container_img{
+    position: absolute;
+    top: -155%;
+    left: -35%;
+    overflow: hidden;
+
+    width: 140%;
+    height: 200%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+
+    transform: rotateZ(-90deg);
+    background-image: 
+      linear-gradient(
+      to bottom,
+      #39fee0,
+      #51d7f9
+    );
+
+    .media_img {
+      overflow: hidden;
+      display: block;
+      position: absolute;
+      width: 80%;
+      height: 70%;
+      background: white;
+      top: 20em;
+      left: -24em;
+      transform: rotateZ(90deg);
+      background-image: url('./../../assets/imgs/outdoor-1807522_1280.jpg');
+      background-size: cover;
+      background-position: center right;
+    } 
+  }
+
+  .informacion {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 28%;
+    color: #fff;
+  }
+  .loading {
+    position: relative;
+    top: 0%;
+    width: 100%;
+    z-index: 3;
+    height: 100vh;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    .content {
+      position: absolute;
+      top: 42%;
+      width: 100%;
+    }
+  }
+  .card {
+    position: absolute !important;
+    right: 10%;
+    bottom: 20%;
+    width: 350px;
+    border-radius: 30px;
+    .btn {
+      font-size: 14px !important;
+      background-color: #005cbf !important;
+      border-color: #005cbf !important;
+      padding: 10px 16px;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 0px !important;
+      &:nth-child(2) {
+        margin-bottom: 30px !important;
+      }
+      input {
+        height: 45px;
+        padding-right: 30px!important;
+        border-radius: 0px !important;
+        &:focus, &:active {
+          border-color: #005cbf !important;
+          -webkit-appearance:none;
+          box-shadow: none !important;
+        }
+      }
+      .form-control-feedback {
+        position: absolute;
+        padding: 10px;
+        pointer-events: none;
+        top: 0;
+        right: 0;
+        color: #cecece;
+      }    
+    } 
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    font-size: 14px;
+  }
+}
+  

@@ -1,0 +1,101 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 85px;
+    
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0px 8px;
+
+    background: #41abef; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #41abef 0%, #1f47b0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #41abef 0%,#1f47b0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #41abef 0%,#1f47b0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+
+    transition: 0.5s;
+    overflow-x: hidden;
+    // padding-top: 60px;
+    white-space: nowrap;
+
+    .active {
+          background-color: rgba(255, 255, 255, 0.123);
+    }
+    .line {
+      border-bottom: 1px solid #fff;
+    }
+    a {
+        padding: 8px 8px 8px 26px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+        display: block;
+        border-radius: 6px;
+        // a:active {
+        //   color: red;
+        // }
+        .icon-text {
+          font-size: 14px;
+        }
+        &:hover {
+            color: #005cbf;
+        }
+        &:nth-child(1) {
+            font-size: 26px;
+            padding: 8px 8px 12px 23px;
+            // border-bottom: 1px solid #fff;
+            margin-bottom: 12px;
+        }
+        .letters {
+            padding-left: 4px !important;
+            padding-bottom: 3px;
+            margin-right: 33px;
+        }
+        .fas,.far {
+            padding-bottom: 3px;
+            margin-right: 33px;
+        }
+        .fa-file {
+            padding-left: 4px;
+        }
+    }
+  }
+  
+  
+  
+//   main .sidebar {
+//     position: absolute;
+//     top: 0;
+//     right: 25px;
+//     font-size: 36px;
+//     margin-left: 50px;
+//   }
+  
+//   .material-icons,
+//   .icon-text {
+//     vertical-align: middle;
+//   }
+  
+
+
+  
+  #main {
+    padding: 16px;
+    margin-left: 85px;
+    transition: margin-left 0.5s;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+  

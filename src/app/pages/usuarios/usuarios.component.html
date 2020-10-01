@@ -1,0 +1,205 @@
+<div class="row pt-3">
+    <div class="col-md-9">
+        <div class="card pl-3 pr-3 pt-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <i class="fas pr-3 fa-users"></i>
+                    <span>Usuarios existentes</span>
+                </div>
+                <button type="button" class="btn crear btn-primary" (click)="showModal = !showModal">Crear</button>
+            </div>
+
+            <table class="table mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Identificación (C.C)</th>
+                    <th scope="col">Rol asociado</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Correo electrónico</th>
+                    <th scope="col" class="text-center">Acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td class="text-center">
+                      <button class="btn" style="background-color:transparent;">
+                        <i class="fas fa-pencil-alt"></i>
+                      </button>
+                      <button class="btn" style="background-color:transparent;">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td class="text-center">
+                      <button class="btn" style="background-color:transparent;">
+                        <i class="fas fa-pencil-alt"></i>
+                      </button>
+                      <button class="btn" style="background-color:transparent;">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td>mdojkkl</td>
+                    <td class="text-center">
+                      <button class="btn" style="background-color:transparent;">
+                        <i class="fas fa-pencil-alt"></i>
+                      </button>
+                      <button class="btn" style="background-color:transparent;">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card busqueda">
+        <div class="card-body">
+          <div class="card-title text-center mb-4">
+            <i class="fas fa-user-plus mr-2"></i>Filtrar Busqueda
+          </div>
+          <form action="">
+            <div class="form-group mb-2">
+              <label for="nombre">Nombres</label>
+              <input type="text" name="nombre" id="nombre" class="form-control">
+            </div>
+            <div class="form-group mb-2">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" name="apellidos" id="apellidos" class="form-control">
+            </div>
+            <div class="form-group mb-2">
+              <label for="identificacion">Identificación (C.C)</label>
+              <input type="text" name="identificacion" id="identificacion" class="form-control">
+            </div>
+            <div class="form-group mb-2">
+              <label for="rol">Rol asociado</label>
+              <select class="form-control" id="rol">
+                <option>Administrador</option>
+                <option>Conductor</option>
+                <option>Recolector</option>
+                <option>Coordinador</option>
+                <option>Digitador CG-UNO</option>
+              </select>
+            </div>
+            <div class="form-group mb-2">
+              <label for="estado">Estado</label>
+              <select class="form-control" id="estado">
+                <option>Activo</option>
+                <option>Inactivo</option>
+              </select>
+            </div>
+            <div class="form-group mb-2">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" name="telefono" id="telefono" class="form-control">
+            </div>
+            <div class="form-group mb-2">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" name="correo" id="correo" class="form-control">
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-md-6">
+              <button type="button" class="btn gradient">Filtrar</button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="btn outline btn-outline-success">Limpiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- <div class="" [ngClass]="{'smodal': showModal}"> -->
+  <div class="modal" [ngClass]="{'d-block': showModal}" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Agregar nuevo usuario</h5>
+            <button type="button" class="close" (click)="showModal = false" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col form-group">
+                    <label for="nombre">Nombres</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control">
+                </div>
+                <div class="col form-group">
+                  <label for="apellidos">Apellidos</label>
+                  <input type="text" name="apellidos" id="apellidos" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col form-group">
+                  <label for="identificacion">Identificación (C.C)</label>
+                  <input type="text" name="identificacion" id="identificacion" class="form-control">
+                </div>
+                <div class="col form-group">
+                  <label for="rol">Rol asociado</label>
+                  <input type="text" name="rol" id="rol" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col form-group">
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" class="form-control">
+                </div>
+                <div class="col form-group">
+                  <label for="pass">Contraseña</label>
+                  <input type="text" name="pass" id="pass" class="form-control">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col form-group">
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" name="telefono" id="telefono" class="form-control">
+                </div>
+                <div class="col form-group">
+                  <label for="correo">Correo electrónico</label>
+                  <input type="email" name="correo" id="correo" class="form-control">
+                </div>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-md-6 text-right">
+                <button type="button" class="btn gradient" (click)="showModal = false">Aceptar</button>
+              </div>
+              <div class="col-md-6">
+                <button type="button" class="btn outline btn-outline-success" (click)="showModal = false">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

@@ -1,0 +1,84 @@
+.d-flex {
+    color: #005cbf;
+    .crear {
+        padding: 6px 22px !important;
+        font-size: 12px;
+        background-color: #005cbf;
+    }
+}
+table {
+    font-size: 11px;
+    .fa-pencil-alt {
+        color: #005cbf;
+    }
+    i {
+        padding: 5px 5px !important;
+    }
+}
+
+.card, .col-md-3, .col-md-9 {
+    min-height: 100% !important;
+}
+.busqueda {
+    padding: 0px 10px;
+    .card-title {
+        font-size: 16px;
+        color: #005cbf;
+    }
+    @extend .forms;
+    @extend .buttons;
+    .btn {
+        min-width: 100%;
+    }
+
+}
+
+.modal {
+    display: none;
+    background-color: rgba(0,0,0,0.7);
+    .modal-body {
+        @extend .forms;
+    }
+    .close span {
+        color: #ff4700;
+    }
+    @extend .buttons;
+
+}
+
+.forms {
+    .form-group {
+        label {
+            font-size: 12px;
+            margin: 0px 0px 4px;
+        }
+        .form-control {
+            font-size: 12px;
+            height: 26px;
+            padding: 2px 8px;
+        }
+    }
+}
+
+.buttons {
+    .row {
+        min-width: 100%;
+        // .col-md-6 {
+        //     padding: 0px;
+        // }
+        .btn {
+            // min-width: 100%;
+            padding: 6px 22px !important;
+            font-size: 12px;
+            color: #649b21;
+            border-color: #649b21;
+        }
+        .gradient {
+            color: #fff;
+            background: #8ac146; /* Old browsers */
+            background: -moz-linear-gradient(-45deg,  #8ac146 0%, #649b21 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg,  #8ac146 0%,#649b21 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg,  #8ac146 0%,#649b21 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+    }
+}

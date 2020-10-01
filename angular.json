@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "olsoftware"
+    }
+  },
+  "defaultProject": "olsoftware",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,39 @@
+<div class="banner apply-opacity"> 
+    <section class="container_img">
+      <figure class="media_img">
+      </figure>
+    </section>
+
+    <div class="informacion">
+      <h2 class="mb-0">Aplicación</h2>
+      <h2 class="mb-4">OLSoftware</h2>
+      <p>Prueba práctica Front-end senior</p>
+    </div>
+
+    <div *ngIf="loading" class="loading text-center">
+      <div class="content">
+        <h2>Estamos preparando todo para tí</h2>
+        <div class="lds-ellipsis">
+          <div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-card">
+      <div class="card-body">
+        <h4 class="card-title text-center mb-5 mt-3">Inicio de sesión</h4>
+        <form action="" class="pl-4 pr-4">
+          <div class="form-group shadow">
+            <i class="fas fa-user form-control-feedback"></i>
+            <input type="text" name="user" [(ngModel)]="user.user" class="form-control" placeholder="Usuario" aria-describedby="helpId">
+          </div>
+          <div class="form-group shadow">
+            <i class="fas fa-lock form-control-feedback"></i>
+            <input type="password" name="pass"[(ngModel)]="user.pass" class="form-control" placeholder="Contraseña" aria-describedby="helpId">
+          </div>
+          <button type="button" (click)="login()" name=""  id="" class="btn btn-primary btn-lg btn-block mb-4" >Iniciar sesión</button>
+        </form>
+      </div>
+    </div>
+    <app-footer alineacion="center"></app-footer>
+</div>
